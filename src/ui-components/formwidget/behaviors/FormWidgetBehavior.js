@@ -1,13 +1,14 @@
 import * as MN from 'marionette';
 import WidgetInfoView from "../views/WidgetInfoView"
 import _ from 'underscore'
+import App from "app"
 
 export default MN.Behavior.extend({
     defaults: {},
     initialize(){
         this.defineSteps();
-        this.listenTo(MN.Application.vent, 'formwidget:step:submit', this.submitStep);
-        this.listenTo(MN.Application.vent, 'formwidget:step:commit', this.commitStep);
+        this.listenTo(App.vent, 'formwidget:step:submit', this.submitStep);
+        this.listenTo(App.vent, 'formwidget:step:commit', this.commitStep);
         this.listenTo(this.view.steps, 'change:currentStep', this.drawStep);
     },
     onBeforeShow(){

@@ -1,4 +1,5 @@
 import * as MN from 'marionette';
+import App from "app"
 import UIHelper from '../../../helpers/UIHelper'
 
 //li.sub-menu.toggled - icon +/- state
@@ -19,7 +20,7 @@ export default MN.Behavior.extend({
         'click .event-user-logout':"logoutUser"
     },
     initialize:function(){
-        this.listenTo(MN.Application.vent, 'route:changed', function(){
+        this.listenTo(App.vent, 'route:changed', function(){
             this.selectMenuItem();
         },this);
     },
@@ -38,8 +39,8 @@ export default MN.Behavior.extend({
         return false;
     },
     selectMenuItem(){
-        let viewName = MN.Application.filterHandler.currentViewName;
-        let filters = MN.Application.filterHandler.routerParams;
+        let viewName = App.filterHandler.currentViewName;
+        let filters = App.filterHandler.routerParams;
         this.ui.menuItems.removeClass('active');
         this.ui.menuItems.find('a').removeClass('active');
 
@@ -86,7 +87,7 @@ export default MN.Behavior.extend({
         return false;
     },
     logoutUser(){
-        MN.Application.currentUser.logout();
+        App.currentUser.logout();
         return false;
     },
     onDestroy(){

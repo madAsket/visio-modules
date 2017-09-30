@@ -2,6 +2,7 @@ import * as MN from 'marionette';
 import UIHelper from "../../../helpers/UIHelper"
 import TabsNavigationTemplate from '../templates/tabs.tpl'
 import StepNavigationTemplate from '../templates/navigation.tpl'
+import App from "app"
 
 export default {
     TabsNavigationView:MN.ItemView.extend({
@@ -35,7 +36,7 @@ export default {
             'change':'render'
         },
         nextStep(){
-            MN.Application.vent.trigger('formwidget:step:submit');
+            App.vent.trigger('formwidget:step:submit');
             return false;
         },
         prevStep(){

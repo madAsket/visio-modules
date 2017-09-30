@@ -16,6 +16,10 @@ var _underscore = require('underscore');
 
 var _underscore2 = _interopRequireDefault(_underscore);
 
+var _app = require('app');
+
+var _app2 = _interopRequireDefault(_app);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
@@ -24,8 +28,8 @@ exports.default = MN.Behavior.extend({
     defaults: {},
     initialize: function initialize() {
         this.defineSteps();
-        this.listenTo(MN.Application.vent, 'formwidget:step:submit', this.submitStep);
-        this.listenTo(MN.Application.vent, 'formwidget:step:commit', this.commitStep);
+        this.listenTo(_app2.default.vent, 'formwidget:step:submit', this.submitStep);
+        this.listenTo(_app2.default.vent, 'formwidget:step:commit', this.commitStep);
         this.listenTo(this.view.steps, 'change:currentStep', this.drawStep);
     },
     onBeforeShow: function onBeforeShow() {

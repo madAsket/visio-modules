@@ -8,6 +8,10 @@ var _marionette = require('marionette');
 
 var MN = _interopRequireWildcard(_marionette);
 
+var _app = require('app');
+
+var _app2 = _interopRequireDefault(_app);
+
 var _UIHelper = require('../../../helpers/UIHelper');
 
 var _UIHelper2 = _interopRequireDefault(_UIHelper);
@@ -34,7 +38,7 @@ exports.default = MN.Behavior.extend({
         'click .event-user-logout': "logoutUser"
     },
     initialize: function initialize() {
-        this.listenTo(MN.Application.vent, 'route:changed', function () {
+        this.listenTo(_app2.default.vent, 'route:changed', function () {
             this.selectMenuItem();
         }, this);
     },
@@ -53,8 +57,8 @@ exports.default = MN.Behavior.extend({
         return false;
     },
     selectMenuItem: function selectMenuItem() {
-        var viewName = MN.Application.filterHandler.currentViewName;
-        var filters = MN.Application.filterHandler.routerParams;
+        var viewName = _app2.default.filterHandler.currentViewName;
+        var filters = _app2.default.filterHandler.routerParams;
         this.ui.menuItems.removeClass('active');
         this.ui.menuItems.find('a').removeClass('active');
 
@@ -101,7 +105,7 @@ exports.default = MN.Behavior.extend({
         return false;
     },
     logoutUser: function logoutUser() {
-        MN.Application.currentUser.logout();
+        _app2.default.currentUser.logout();
         return false;
     },
     onDestroy: function onDestroy() {
