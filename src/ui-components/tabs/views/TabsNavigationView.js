@@ -1,5 +1,5 @@
 import * as MN from 'marionette';
-import TabsNavigationTemplate from "../templates/tabs"
+import TabsNavigationTemplate from "../templates/tabs.tpl"
 
 export default MN.ItemView.extend({
     template:TabsNavigationTemplate,

@@ -8,7 +8,7 @@ var _marionette = require("marionette");
 
 var MN = _interopRequireWildcard(_marionette);
 
-var _tabs = require("../templates/tabs");
+var _tabs = require("../templates/tabs.tpl");
 
 var _tabs2 = _interopRequireDefault(_tabs);
 

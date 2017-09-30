@@ -1,5 +1,5 @@
 import * as MN from 'marionette';
-import PaginatorTemplate from "../templates/paginator"
+import PaginatorTemplate from "../templates/paginator.tpl"
 
 
 export default MN.ItemView.extend({

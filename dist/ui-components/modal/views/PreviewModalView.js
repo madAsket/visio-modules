@@ -8,7 +8,7 @@ var _marionette = require("marionette");
 
 var MN = _interopRequireWildcard(_marionette);
 
-var _preview = require("../templates/preview");
+var _preview = require("../templates/preview.tpl");
 
 var _preview2 = _interopRequireDefault(_preview);
 

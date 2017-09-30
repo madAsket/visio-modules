@@ -2,8 +2,8 @@ import * as MN from 'marionette';
 import Backbone from 'backbone';
 import * as _ from 'underscore';
 import $ from 'jquery';
-import GlobalMessageTemplate from '../templates/global_form_message';
-import GlobalErrorTemplate from '../templates/global_form_errors';
+import GlobalMessageTemplate from '../templates/global_form_message.tpl';
+import GlobalErrorTemplate from '../templates/global_form_errors.tpl';
 import Validators from '../validators';
 import UIHelper from '../../helpers/UIHelper'
 

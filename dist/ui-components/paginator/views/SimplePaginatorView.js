@@ -8,7 +8,7 @@ var _marionette = require('marionette');
 
 var MN = _interopRequireWildcard(_marionette);
 
-var _paginator = require('../templates/paginator');
+var _paginator = require('../templates/paginator.tpl');
 
 var _paginator2 = _interopRequireDefault(_paginator);
 

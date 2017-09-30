@@ -22,11 +22,11 @@ var _jquery = require('jquery');
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _global_form_message = require('../templates/global_form_message');
+var _global_form_message = require('../templates/global_form_message.tpl');
 
 var _global_form_message2 = _interopRequireDefault(_global_form_message);
 
-var _global_form_errors = require('../templates/global_form_errors');
+var _global_form_errors = require('../templates/global_form_errors.tpl');
 
 var _global_form_errors2 = _interopRequireDefault(_global_form_errors);
 
